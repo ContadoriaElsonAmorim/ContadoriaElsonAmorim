@@ -1,0 +1,1733 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Contadoria Elson Amorim - Serviços de contabilidade em Aracaju, Sergipe.">
+    <meta name="keywords" content="contabilidade, contador, contabilidade Aracaju, Contadoria Elson Amorim, Sergipe">
+    <meta name="author" content="Contadoria Elson Amorim">
+
+    <title>Contadoria Elson Amorim | Contabilidade em Aracaju - SE</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        :root {
+            --primary: #0b2d4d;
+            --primary-dark: #061d33;
+            --secondary: #1261a0;
+            --accent: #d4a84f;
+            --accent-light: #f4dfad;
+            --light: #f5f8fb;
+            --white: #ffffff;
+            --text: #263746;
+            --muted: #6c7a89;
+            --border: #e5ebf1;
+            --success: #198754;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            color: var(--text);
+            background: #fff;
+            line-height: 1.7;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            background: rgba(6, 29, 51, 0.97);
+            padding: 14px 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .navbar-brand {
+            color: #fff !important;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            font-size: 1.25rem;
+            letter-spacing: -0.4px;
+        }
+
+        .navbar-brand span {
+            color: var(--accent);
+        }
+
+        .navbar-nav .nav-link {
+            color: rgba(255,255,255,.85);
+            font-weight: 500;
+            margin: 0 7px;
+            transition: .3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--accent);
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255,255,255,.3);
+        }
+
+        .navbar-toggler-icon {
+            filter: brightness(0) invert(1);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 720px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    115deg,
+                    rgba(6, 29, 51, .98),
+                    rgba(11, 45, 77, .91)
+                ),
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(212,168,79,.22),
+                    transparent 35%
+                );
+            color: #fff;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            right: -220px;
+            top: -200px;
+            background: rgba(212,168,79,.08);
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            left: -250px;
+            bottom: -220px;
+            background: rgba(18,97,160,.18);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 50px;
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.15);
+            color: var(--accent-light);
+            font-size: .9rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.08;
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero p {
+            color: rgba(255,255,255,.78);
+            font-size: 1.12rem;
+            max-width: 650px;
+            margin-bottom: 35px;
+        }
+
+        .btn-main {
+            background: var(--accent);
+            border: 2px solid var(--accent);
+            color: var(--primary-dark);
+            font-weight: 700;
+            padding: 13px 25px;
+            border-radius: 8px;
+            transition: .3s;
+        }
+
+        .btn-main:hover {
+            background: #e5bc69;
+            border-color: #e5bc69;
+            color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-light-custom {
+            border: 2px solid rgba(255,255,255,.45);
+            color: #fff;
+            padding: 13px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn-outline-light-custom:hover {
+            background: #fff;
+            color: var(--primary);
+        }
+
+        .hero-stat {
+            margin-top: 55px;
+            display: flex;
+            gap: 45px;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat strong {
+            display: block;
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.7rem;
+            color: #fff;
+        }
+
+        .hero-stat small {
+            color: rgba(255,255,255,.65);
+        }
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        .section {
+            padding: 95px 0;
+        }
+
+        .section-light {
+            background: var(--light);
+        }
+
+        .section-title {
+            margin-bottom: 55px;
+        }
+
+        .section-title .small-title {
+            color: var(--secondary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: .78rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .section-title h2 {
+            color: var(--primary);
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--muted);
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-card {
+            background: #fff;
+            border-radius: 18px;
+            padding: 35px;
+            height: 100%;
+            border: 1px solid var(--border);
+            box-shadow: 0 15px 40px rgba(11,45,77,.06);
+        }
+
+        .about-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(18,97,160,.1);
+            color: var(--secondary);
+            border-radius: 14px;
+            font-size: 1.7rem;
+            margin-bottom: 22px;
+        }
+
+        .about-card h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .about-card p {
+            color: var(--muted);
+            margin-bottom: 0;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .service-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 30px;
+            height: 100%;
+            transition: .3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::after {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: rgba(212,168,79,.08);
+            border-radius: 50%;
+            right: -30px;
+            bottom: -30px;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(11,45,77,.1);
+            border-color: rgba(18,97,160,.25);
+        }
+
+        .service-icon {
+            width: 58px;
+            height: 58px;
+            background: var(--primary);
+            color: var(--accent);
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 22px;
+        }
+
+        .service-card h4 {
+            color: var(--primary);
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: var(--muted);
+            font-size: .93rem;
+            margin-bottom: 0;
+        }
+
+        /* =========================
+           CNAE
+        ========================= */
+
+        .cnae-box {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 20px;
+            padding: 45px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cnae-box::after {
+            content: "\F4CA";
+            font-family: bootstrap-icons;
+            position: absolute;
+            font-size: 13rem;
+            right: -20px;
+            bottom: -80px;
+            color: rgba(255,255,255,.05);
+        }
+
+        .cnae-code {
+            display: inline-block;
+            background: rgba(255,255,255,.1);
+            border: 1px solid rgba(255,255,255,.15);
+            border-radius: 8px;
+            padding: 8px 14px;
+            font-weight: 700;
+            color: var(--accent-light);
+            margin-bottom: 18px;
+        }
+
+        /* =========================
+           DIFFERENTIALS
+        ========================= */
+
+        .feature {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+
+        .feature-icon {
+            flex: 0 0 48px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(18,97,160,.1);
+            color: var(--secondary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+        .feature h5 {
+            color: var(--primary);
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+
+        .feature p {
+            color: var(--muted);
+            margin: 0;
+            font-size: .92rem;
+        }
+
+        /* =========================
+           COMPANY DATA
+        ========================= */
+
+        .data-card {
+            background: #fff;
+            border-radius: 15px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            box-shadow: 0 10px 35px rgba(11,45,77,.05);
+        }
+
+        .data-header {
+            background: var(--primary);
+            color: #fff;
+            padding: 20px 25px;
+        }
+
+        .data-header h4 {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .data-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 14px 25px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .data-row:last-child {
+            border-bottom: 0;
+        }
+
+        .data-label {
+            color: var(--muted);
+            font-size: .88rem;
+        }
+
+        .data-value {
+            color: var(--primary);
+            font-weight: 600;
+            text-align: right;
+            font-size: .88rem;
+        }
+
+        .status-active {
+            color: var(--success);
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-section {
+            background: var(--primary-dark);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: "";
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            background: rgba(18,97,160,.15);
+            border-radius: 50%;
+            right: -200px;
+            top: -150px;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,.06);
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 15px;
+            padding: 28px;
+            height: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 24px;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-item i {
+            color: var(--accent);
+            font-size: 1.3rem;
+        }
+
+        .contact-item small {
+            color: rgba(255,255,255,.55);
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .contact-item span,
+        .contact-item a {
+            color: #fff;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent);
+        }
+
+        .contact-title {
+            color: #fff;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #041321;
+            color: rgba(255,255,255,.55);
+            padding: 30px 0;
+        }
+
+        .footer-brand {
+            color: white;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+        }
+
+        .footer-brand span {
+            color: var(--accent);
+        }
+
+        .footer-link {
+            color: rgba(255,255,255,.55);
+            margin-left: 20px;
+            transition: .3s;
+        }
+
+        .footer-link:hover {
+            color: var(--accent);
+        }
+
+        /* =========================
+           FLOATING BUTTON
+        ========================= */
+
+        .floating-contact {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 999;
+        }
+
+        .floating-contact a {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #198754;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.6rem;
+            box-shadow: 0 8px 25px rgba(25,135,84,.35);
+            transition: .3s;
+        }
+
+        .floating-contact a:hover {
+            transform: scale(1.08);
+            background: #157347;
+            color: white;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 991px) {
+
+            .hero {
+                min-height: 650px;
+                text-align: center;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-stat {
+                justify-content: center;
+            }
+
+            .navbar-nav {
+                padding-top: 15px;
+            }
+
+            .section {
+                padding: 70px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+
+            .hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .hero-stat {
+                gap: 25px;
+            }
+
+            .hero-stat strong {
+                font-size: 1.4rem;
+            }
+
+            .cnae-box {
+                padding: 30px;
+            }
+
+            .data-row {
+                display: block;
+            }
+
+            .data-value {
+                text-align: left;
+                margin-top: 3px;
+            }
+
+            .footer-link {
+                margin-left: 0;
+                margin-right: 15px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="#inicio">
+            Contadoria <span>Elson Amorim</span>
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+            aria-controls="menu"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Início</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre">Sobre</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicos">Atividades</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#empresa">Empresa</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+
+                <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                    <a
+                        href="tel:+557932413419"
+                        class="btn btn-main btn-sm"
+                    >
+                        <i class="bi bi-telephone me-1"></i>
+                        Ligar agora
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero" id="inicio">
+
+    <div class="container hero-content">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-9">
+
+                <div class="hero-badge">
+                    <i class="bi bi-patch-check-fill"></i>
+                    Contabilidade em Aracaju - Sergipe
+                </div>
+
+                <h1>
+                    Contabilidade com
+                    <span>seriedade, experiência</span>
+                    e confiança.
+                </h1>
+
+                <p>
+                    A Contadoria Elson Amorim oferece serviços de contabilidade
+                    com compromisso, organização e atenção às necessidades
+                    de seus clientes.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3">
+
+                    <a href="#servicos" class="btn btn-main">
+                        <i class="bi bi-briefcase me-2"></i>
+                        Conheça nossas atividades
+                    </a>
+
+                    <a href="#contato" class="btn btn-outline-light-custom">
+                        <i class="bi bi-chat-dots me-2"></i>
+                        Entre em contato
+                    </a>
+
+                </div>
+
+                <div class="hero-stat">
+
+                    <div>
+                        <strong>2010</strong>
+                        <small>Fundação</small>
+                    </div>
+
+                    <div>
+                        <strong>16+</strong>
+                        <small>Anos de atuação</small>
+                    </div>
+
+                    <div>
+                        <strong>Ativa</strong>
+                        <small>Situação cadastral</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     SOBRE
+========================= -->
+
+<section class="section" id="sobre">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <span class="small-title">
+                Sobre a empresa
+            </span>
+
+            <h2>
+                Experiência e compromisso
+            </h2>
+
+            <p>
+                A Contadoria Elson Amorim atua no segmento de contabilidade
+                desde 20 de abril de 2010, oferecendo serviços contábeis
+                na cidade de Aracaju, Sergipe.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4">
+
+                <div class="about-card">
+
+                    <div class="about-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
+
+                    <h3>
+                        Uma empresa estabelecida
+                    </h3>
+
+                    <p>
+                        Fundada em 2010, a empresa possui registro ativo
+                        e está estabelecida no bairro Siqueira Campos,
+                        em Aracaju - SE.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="about-card">
+
+                    <div class="about-icon">
+                        <i class="bi bi-calculator"></i>
+                    </div>
+
+                    <h3>
+                        Atividade contábil
+                    </h3>
+
+                    <p>
+                        A atividade econômica principal registrada é
+                        Atividades de Contabilidade, CNAE 69.20-6-01.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="about-card">
+
+                    <div class="about-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <h3>
+                        Organização e confiança
+                    </h3>
+
+                    <p>
+                        Uma estrutura voltada para a prestação de serviços
+                        contábeis com organização, responsabilidade e
+                        acompanhamento profissional.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ATIVIDADES / SERVIÇOS
+========================= -->
+
+<section class="section section-light" id="servicos">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <span class="small-title">
+                Atividades
+            </span>
+
+            <h2>
+                Serviços de contabilidade
+            </h2>
+
+            <p>
+                Soluções contábeis para auxiliar empresas e empreendedores
+                na organização e acompanhamento de suas informações.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-calculator-fill"></i>
+                    </div>
+
+                    <h4>
+                        Escrituração Contábil
+                    </h4>
+
+                    <p>
+                        Organização e registro das informações contábeis
+                        da empresa de forma estruturada.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-file-earmark-text-fill"></i>
+                    </div>
+
+                    <h4>
+                        Obrigações Contábeis
+                    </h4>
+
+                    <p>
+                        Apoio na organização das informações necessárias
+                        para as obrigações contábeis e empresariais.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+
+                    <h4>
+                        Análise Financeira
+                    </h4>
+
+                    <p>
+                        Informações organizadas para auxiliar no
+                        acompanhamento da situação financeira da empresa.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-folder-check"></i>
+                    </div>
+
+                    <h4>
+                        Organização Documental
+                    </h4>
+
+                    <p>
+                        Apoio na organização de documentos e informações
+                        importantes para a rotina contábil.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-bar-chart-fill"></i>
+                    </div>
+
+                    <h4>
+                        Informações Gerenciais
+                    </h4>
+
+                    <p>
+                        Organização de informações que podem contribuir
+                        para uma melhor compreensão do negócio.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-person-workspace"></i>
+                    </div>
+
+                    <h4>
+                        Atendimento Contábil
+                    </h4>
+
+                    <p>
+                        Atendimento voltado às necessidades contábeis
+                        de empresas e empresários.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CNAE
+========================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="cnae-box">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <div class="cnae-code">
+                        CNAE 69.20-6-01
+                    </div>
+
+                    <h2 class="fw-bold mb-3">
+                        Atividades de Contabilidade
+                    </h2>
+
+                    <p class="mb-0 text-white-50">
+                        A atividade econômica principal registrada para a
+                        empresa é <strong class="text-white">
+                        Atividades de Contabilidade</strong>,
+                        conforme as informações cadastrais apresentadas.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+
+                    <i
+                        class="bi bi-calculator"
+                        style="font-size: 6rem; color: rgba(255,255,255,.15);"
+                    ></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DIFERENCIAIS
+========================= -->
+
+<section class="section section-light">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <div class="section-title mb-4">
+
+                    <span class="small-title">
+                        Nosso propósito
+                    </span>
+
+                    <h2>
+                        Contabilidade para apoiar seu negócio
+                    </h2>
+
+                    <p>
+                        Uma boa organização contábil é parte importante
+                        da gestão de qualquer empresa.
+                    </p>
+
+                </div>
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        <i class="bi bi-check-lg"></i>
+                    </div>
+
+                    <div>
+
+                        <h5>
+                            Organização
+                        </h5>
+
+                        <p>
+                            Informações contábeis organizadas para facilitar
+                            o acompanhamento da empresa.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        <i class="bi bi-check-lg"></i>
+                    </div>
+
+                    <div>
+
+                        <h5>
+                            Responsabilidade
+                        </h5>
+
+                        <p>
+                            Compromisso com a rotina e as necessidades
+                            contábeis dos clientes.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        <i class="bi bi-check-lg"></i>
+                    </div>
+
+                    <div>
+
+                        <h5>
+                            Experiência
+                        </h5>
+
+                        <p>
+                            Empresa fundada em 2010 e com atuação no
+                            segmento de contabilidade.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="about-card">
+
+                    <div class="about-icon">
+                        <i class="bi bi-quote"></i>
+                    </div>
+
+                    <h3>
+                        "Informação organizada é parte essencial
+                        de uma empresa bem administrada."
+                    </h3>
+
+                    <p>
+                        A contabilidade exerce um papel importante na
+                        organização empresarial, proporcionando informações
+                        que auxiliam no acompanhamento das atividades
+                        e na gestão do negócio.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DADOS DA EMPRESA
+========================= -->
+
+<section class="section" id="empresa">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <span class="small-title">
+                Informações cadastrais
+            </span>
+
+            <h2>
+                Dados da empresa
+            </h2>
+
+            <p>
+                Informações de registro da Contadoria Elson Amorim.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- REGISTRO -->
+
+            <div class="col-lg-6">
+
+                <div class="data-card">
+
+                    <div class="data-header">
+
+                        <h4>
+                            <i class="bi bi-building me-2"></i>
+                            Informações de Registro
+                        </h4>
+
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">CNPJ</span>
+                        <span class="data-value">11.849.740/0001-13</span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Razão Social</span>
+                        <span class="data-value">
+                            Elson Amorim Simoes Contadoria
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Nome Fantasia</span>
+                        <span class="data-value">
+                            Contadoria Elson Amorim
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Data de Abertura</span>
+                        <span class="data-value">
+                            20/04/2010
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Porte</span>
+                        <span class="data-value">
+                            Micro Empresa
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Natureza Jurídica</span>
+                        <span class="data-value">
+                            Empresário (Individual)
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Capital Social</span>
+                        <span class="data-value">
+                            R$ 5.000,00
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Tipo</span>
+                        <span class="data-value">
+                            Matriz
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Situação</span>
+                        <span class="data-value status-active">
+                            <i class="bi bi-check-circle-fill me-1"></i>
+                            Ativa
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">CRC</span>
+                        <span class="data-value">
+                            SE-000266/O
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- LOCALIZAÇÃO -->
+
+            <div class="col-lg-6">
+
+                <div class="data-card">
+
+                    <div class="data-header">
+
+                        <h4>
+                            <i class="bi bi-geo-alt-fill me-2"></i>
+                            Localização
+                        </h4>
+
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Logradouro</span>
+                        <span class="data-value">
+                            Rua Goias, 896
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Complemento</span>
+                        <span class="data-value">
+                            Pav Superior
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Bairro</span>
+                        <span class="data-value">
+                            Siqueira Campos
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">CEP</span>
+                        <span class="data-value">
+                            49075-280
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Município</span>
+                        <span class="data-value">
+                            Aracaju
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Estado</span>
+                        <span class="data-value">
+                            Sergipe - SE
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Atividade Principal</span>
+                        <span class="data-value">
+                            69.20-6-01
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Descrição</span>
+                        <span class="data-value">
+                            Atividades de contabilidade
+                        </span>
+                    </div>
+
+                    <div class="p-4">
+
+                        <a
+                            href="https://www.google.com/maps/search/?api=1&query=Rua+Goias+896+Siqueira+Campos+Aracaju+SE+49075-280"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-outline-primary w-100"
+                        >
+                            <i class="bi bi-map me-2"></i>
+                            Procurar no Google Maps
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTATO
+========================= -->
+
+<section class="section contact-section" id="contato">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <span
+                class="small-title"
+                style="color: var(--accent);"
+            >
+                Fale conosco
+            </span>
+
+            <h2 class="text-white">
+                Entre em contato
+            </h2>
+
+            <p class="text-white-50">
+                Estamos localizados em Aracaju, Sergipe.
+                Entre em contato para obter mais informações.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- TELEFONE -->
+
+            <div class="col-md-4">
+
+                <div class="contact-card">
+
+                    <h4 class="contact-title">
+                        Atendimento
+                    </h4>
+
+                    <div class="contact-item">
+
+                        <i class="bi bi-telephone-fill"></i>
+
+                        <div>
+
+                            <small>Telefone</small>
+
+                            <a href="tel:+557932413419">
+                                (79) 3241-3419
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <a
+                        href="tel:+557932413419"
+                        class="btn btn-main w-100 mt-3"
+                    >
+                        <i class="bi bi-telephone me-2"></i>
+                        Ligar agora
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="col-md-4">
+
+                <div class="contact-card">
+
+                    <h4 class="contact-title">
+                        E-mail
+                    </h4>
+
+                    <div class="contact-item">
+
+                        <i class="bi bi-envelope-fill"></i>
+
+                        <div>
+
+                            <small>Endereço eletrônico</small>
+
+                            <a
+                                href="mailto:priftienripkj@gmail.com"
+                            >
+                                priftienripkj@gmail.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <a
+                        href="mailto:priftienripkj@gmail.com"
+                        class="btn btn-main w-100 mt-3"
+                    >
+                        <i class="bi bi-envelope me-2"></i>
+                        Enviar e-mail
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ENDEREÇO -->
+
+            <div class="col-md-4">
+
+                <div class="contact-card">
+
+                    <h4 class="contact-title">
+                        Endereço
+                    </h4>
+
+                    <div class="contact-item">
+
+                        <i class="bi bi-geo-alt-fill"></i>
+
+                        <div>
+
+                            <small>Localização</small>
+
+                            <span>
+                                Rua Goias, 896<br>
+                                Pav Superior<br>
+                                Siqueira Campos<br>
+                                Aracaju - SE<br>
+                                CEP 49075-280
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=Rua+Goias+896+Siqueira+Campos+Aracaju+SE+49075-280"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-outline-light w-100 mt-3"
+                    >
+                        <i class="bi bi-map me-2"></i>
+                        Ver localização
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="row align-items-center gy-3">
+
+            <div class="col-lg-6">
+
+                <div class="footer-brand">
+                    Contadoria <span>Elson Amorim</span>
+                </div>
+
+                <small>
+                    © 2026 Contadoria Elson Amorim. Todos os direitos reservados.
+                </small>
+
+            </div>
+
+            <div class="col-lg-6 text-lg-end">
+
+                <a href="#inicio" class="footer-link">
+                    Início
+                </a>
+
+                <a href="#sobre" class="footer-link">
+                    Sobre
+                </a>
+
+                <a href="#servicos" class="footer-link">
+                    Atividades
+                </a>
+
+                <a href="#contato" class="footer-link">
+                    Contato
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     BOTÃO FLUTUANTE
+========================= -->
+
+<div class="floating-contact">
+
+    <a
+        href="tel:+557932413419"
+        title="Ligar para a Contadoria"
+        aria-label="Ligar para a Contadoria"
+    >
+        <i class="bi bi-telephone-fill"></i>
+    </a>
+
+</div>
+
+
+<!-- Bootstrap JS -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+<!-- Pequeno script para fechar o menu no celular -->
+<script>
+
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
+
+        link.addEventListener('click', function() {
+
+            const menu = document.querySelector('.navbar-collapse');
+
+            if (menu.classList.contains('show')) {
+
+                const bsCollapse = bootstrap.Collapse.getInstance(menu);
+
+                if (bsCollapse) {
+                    bsCollapse.hide();
+                }
+
+            }
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
